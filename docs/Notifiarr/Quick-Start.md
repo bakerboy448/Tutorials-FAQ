@@ -1,14 +1,14 @@
 # Quick Start
 
-Here we're going to explain the basic setup for Notifiarr to get it working with Sonarr, Radarr, Bazarr and Plex.
+Here we're going to explain the basic setup for Notifiarr to get it working with Sonarr, Radarr, Bazarr.
 
-If you want to make use of the other options I suggest to look at the advanced guide descriptions.
+If you want to make use of the other options I suggest to looking at the [Notifiarr Wiki](https://notifiarr.wiki){:target="_blank" rel="noopener noreferrer"}.
 
 ------
 
 ## Login
 
-First we're going to visit the [Notifiarr](https://discordnotifier.com/index.php){:target="_blank" rel="noopener noreferrer"} site, if you don't have an account yet, click the link to signup.
+First we're going to visit the [Notifiarr](https://notifiarr.com/index.php){:target="_blank" rel="noopener noreferrer"} site, if you don't have an account yet, click the link to signup.
 
 ![!dn-login](images/dn-login.png)
 
@@ -25,14 +25,16 @@ First we're going to visit the [Notifiarr](https://discordnotifier.com/index.php
 
 After you have logged in, you will be redirected to your profile screen.
 
-![!dn-profile](images/dn-profile.png)
+![!profile](images/profile.png)
 
-1. Select your `Country`.
-1. Select your `Timezone`.
-1. Click on `Generate API Key` (This needs to be done).
-1. Select your `Notification Language`.
-1. Change your `Time Format` to your liking.
-1. Don't forget to `Save` your Changes.
+1. Click on `Generate API Key` (This needs to be done)
+1. Select your `Country`
+1. Select your `Timezone`
+1. Change your `Time Format` to your liking
+1. Select your `Site Theme`
+1. Select your `Notification Language`
+1. If you decide to delete your account, check the box
+1. Don't forget to `Save` your changes
 
 ------
 
@@ -43,34 +45,34 @@ After you have logged in, you will be redirected to your profile screen.
 
 ### Integration Settings
 
-![!dn-manage-integration-open](images/dn-manage-integration-open.png)
+![!open-integrations](images/open-integrations.png)
 
 First, click on  `Manage Integrations` so you can enable what you want to receive notifications for.
 
-![!dn-manage-integration](images/dn-manage-integration.png)
+![!integration-list](images/integration-list.png)
 
-A screen will popup and here you're able to select from which application/service you receive a notification.
+A screen will popup and here you're able to select from which application/services you receive a notification.
 
 When you enabled the ones you want click on `Save`
 
 Setup which notifications you want to to receive from each option.
 
-![!dn-notifcation-settings](images/dn-notifcation-settings.png)
+![!notification-settings](images/notification-settings.png)
 
 1. Cog wheel, this opens the integration settings
 1. External link, this opens the website for the integration
 1. WIKI link, this opens any extra wiki information available for the integration
-1. Trigger, this enables/disables a specific trigger for the integration
+1. Triggers, this enables/disables a specific trigger for the integration
 1. Channels, this sets the channel in your server to post to for the integration
 
 ### Discord Settings
 
 Here we will cover the following
 
-- Setup the server & shared channels.
-- Invite the bot into your server.
-- Setup reactions.
-- Setup Indexers reactions.
+- Setup the server & shared error channel
+- Invite the bot into your server
+- Setup reactions
+- Setup indexer reactions
 
 #### Create the channels
 
@@ -104,14 +106,10 @@ Open your User Settings -> Appearance -> Enable Developer Mode.
 
 Paste the server ID in box `[1]`
 
-![!dn-channel-paste](images/dn-channel-paste.png)
+![!discord-server](images/discord-server.png)
 
 1. Add your server ID
-1. Select the channel for the `#media` channel.
-1. Use this option if you want to use separate channels for the notifications.
 1. Select the channel for the `#errors` channel.
-1. Select the channel for the `#plex` channel.
-1. Use this option if you want to use separate channels for the notifications.
 
 ### Invite the bot
 
@@ -127,7 +125,7 @@ You will get a screen that looks like the following screenshot.
 1. Click on `Continue` to approve.
 
 !!! note
-    Check [Discord Permissions](/Notifiarr/Discord-Permissions/){:target="_blank" rel="noopener noreferrer"} for information which permissions the bot needs.
+    Check [Discord Permissions](https://notifiarr.wiki/en/Website/Discord/Permissions)){:target="_blank" rel="noopener noreferrer"} for information which permissions the bot needs.
 
 #### Reactions
 
@@ -143,11 +141,11 @@ This section exist of 2 parts.
 First we're going to download the emoji's and you can do that in 2 ways.
 
 1. 1 at a time - Right click -> Save As... - for these emoji images to some location on your computer.
-1. Pack Download - Click [here](https://discordnotifier.com/setup.php?grab=reactions){:target="_blank" rel="noopener noreferrer"} to download a zip of all the current reaction images.
+1. Pack Download - Click [here](https://notifiarr.com/setup.php?grab=reactions){:target="_blank" rel="noopener noreferrer"} to download a zip of all the current reaction images.
 
 !!! attention
 
-    To download the Emoji Pack from the link in this Guide you will need to be logged in  to [Notifiarr](https://discordnotifier.com/index.php){:target="_blank" rel="noopener noreferrer"} site !!!
+    To download the Emoji Pack from the link in this Guide you will need to be logged in  to [Notifiarr](https://notifiarr.com/index.php){:target="_blank" rel="noopener noreferrer"} site !!!
 
     Else you can find it on the main Notifiarr site in the `Integration Setup` Category at the bottom right
 
@@ -223,7 +221,7 @@ Radarr, Readarr and Lidarr supports Notifiarr natively so that's an easy one to 
 `Settings` => `Connect` => click on the ![dn-arr-add-plus.png](images/dn-arr-add-plus.png) `plus` icon and select `Notifiarr` add your API key and you're done.
 
 ??? example "Radarr Example"
-    In Radarr go to `Settings` => `Connect` => Click on the ![dn-arr-add-plus](images/dn-arr-add-plus.png) `plus` icon and select `DiscordNotifier.com`.
+    In Radarr go to `Settings` => `Connect` => Click on the ![dn-arr-add-plus](images/dn-arr-add-plus.png) `plus` icon and select `notifiarr`.
 
     ![!dn-arr-add-notification](images/dn-arr-add-notification.png)
 
@@ -326,7 +324,7 @@ Scroll up and save
     1. Add the URL that you can copy/paste from the integrations page.
     2. Click on `SAVE CHANGES`
 
-If you want to show more advanced info like Transcode, CPU & Ram take a look at [Plex Integration](/Notifiarr/Integrations-Setup/Plex/){:target="_blank" rel="noopener noreferrer"}
+If you want to show more advanced info like Transcode, CPU & Ram take a look at [Plex Integration](https://notifiarr.wiki/en/Website/Integrations/Plex){:target="_blank" rel="noopener noreferrer"}
 
 !!! note
     If there is still an issue, try asking in the Notifiarr [discord channel](https://discord.gg/AURf8Yz){:target="_blank" rel="noopener noreferrer"} for additional support.

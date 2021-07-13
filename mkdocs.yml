@@ -9,6 +9,9 @@ repo_name: TRaSH-/Guides
 copyright: Copyright &copy; 2020 TRaSH
 
 extra:
+  analytics:
+    provider: google
+    property: G-ZZKM4MPQXL
   manifest: manifest.webmanifest
   social:
     - icon: fontawesome/brands/discord
@@ -19,9 +22,6 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
-extra_javascript:
-  - javascripts/extra.js
-
 markdown_extensions:
   - admonition
   - attr_list
@@ -31,8 +31,10 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed
   - pymdownx.highlight
+  - codehilite:
+      guess_lang: true
   - toc:
-      permalink: true
+      permalink: "¶"
       toc_depth: 5
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -42,9 +44,9 @@ markdown_extensions:
 plugins:
   - search
   - git-revision-date-localized:
-      type: timeago
+      type: datetime
       locale: en
-      fallback_to_build_date: false
+  #    fallback_to_build_date: false
   - awesome-pages
   - macros:
       j2_block_start_string: "[[%"
@@ -54,20 +56,43 @@ plugins:
   - redirects:
       redirect_maps:
         discord.md: https://discord.gg/Vau8dZ3
-        Radarr/V3/How-to-importexport-Custom-Formats-and-truly-make-use-of-it.md: Radarr/V3/Radarr-import-custom-formats.md
-        Radarr/V3/Collection-of-Custom-Formats-for-RadarrV3.md: Radarr/V3/Radarr-collection-of-custom-formats.md
-        Sonarr/V3/Remote-Path-Mappings-explained-for-Sonarr.md: Sonarr/V3/Sonarr-remote-path-mapping.md
-        Misc/Discord-Notifier-Basic-Setup.md: Notifiarr/Quick-Start.md
-        Misc/Discord-Notifiarr-Setup.md: Notifiarr/Quick-Start.md
-        hardlinks.md: Misc/how-to-set-up-hardlinks-and-atomic-moves.md
-        hardlink.md: Misc/how-to-set-up-hardlinks-and-atomic-moves.md
-        custom-formats.md: Radarr/V3/Radarr-collection-of-custom-formats.md
-        cf.md: Radarr/V3/Radarr-collection-of-custom-formats.md
+        # Radarr old redirects
+        Radarr/V3/How-to-importexport-Custom-Formats-and-truly-make-use-of-it.md: Radarr/Radarr-import-custom-formats.md
+        Radarr/V3/Collection-of-Custom-Formats-for-RadarrV3.md: Radarr/Radarr-collection-of-custom-formats.md
+        #  Radarr redirects
+        Radarr/V3/Radarr-collection-of-custom-formats.md: Radarr/Radarr-collection-of-custom-formats.md
+        Radarr/V3/Radarr-import-custom-formats.md: Radarr/Radarr-import-custom-formats.md
+        Radarr/V3/Radarr-Quality-Settings-File-Size.md: Radarr/Radarr-Quality-Settings-File-Size.md
+        Radarr/V3/Radarr-recommended-naming-scheme.md: Radarr/Radarr-recommended-naming-scheme.md
+        Radarr/V3/Radarr-remote-path-mapping.md: Radarr/Radarr-remote-path-mapping.md
+        Radarr/V3/Radarr-setup-custom-formats.md: Radarr/Radarr-setup-custom-formats.md
+        Radarr/V3/Tips/Radarr-add-a-movie-collection.md: Radarr/Tips/Radarr-add-a-movie-collection.md
+        Radarr/V3/Tips/Radarr-rename-your-folders.md: Radarr/Tips/Radarr-rename-your-folders.md
+        Radarr/V3/Tips/Radarr-show-unknown-movie-items.md: Radarr/Tips/Radarr-show-unknown-movie-items.md
+        # Sonarr old redirects
+        Sonarr/V3/Remote-Path-Mappings-explained-for-Sonarr.md: Sonarr/Sonarr-remote-path-mapping.md
+        # Sonarr redirects
+        Sonarr/V3/Sonarr-Quality-Settings-File-Size.md: Sonarr/Sonarr-Quality-Settings-File-Size.md
+        Sonarr/V3/Sonarr-recommended-naming-scheme.md: Sonarr/Sonarr-recommended-naming-scheme.md
+        Sonarr/V3/Sonarr-Release-Profile-RegEx.md: Sonarr/Sonarr-Release-Profile-RegEx.md
+        Sonarr/V3/Sonarr-Release-Profile-RegEx-Anime.md: Sonarr/Sonarr-Release-Profile-RegEx-Anime.md
+        Sonarr/V3/Sonarr-remote-path-mapping.md: Sonarr/Sonarr-remote-path-mapping.md
+        # Downloader redirects
+        NZBGet/How-to-setup-NZBGet.md: Downloaders/NZBGet/Basic-Setup.md
+        NZBGet/scripts/index.md: Downloaders/NZBGet/scripts/index.md
+        # Hardlinks redirects
+        Misc/how-to-set-up-hardlinks-and-atomic-moves.md: Hardlinks/Hardlinks-and-Instant-Moves.md
+        # Shortcuts redirects
+        hardlinks.md: Hardlinks/Hardlinks-and-Instant-Moves.md
+        hardlink.md: Hardlinks/Hardlinks-and-Instant-Moves.md
+        check-hardlinks.md: Hardlinks/Check-if-hardlinks-are-working.md
+        custom-formats.md: Radarr/Radarr-collection-of-custom-formats.md
+        cf.md: Radarr/Radarr-collection-of-custom-formats.md
         TorGuard.md: Misc/How-to-setup-Torguard-for-port-forwarding.md
         torguard.md: Misc/How-to-setup-Torguard-for-port-forwarding.md
         compose.md: Misc/how-to-provide-a-docker-compose.md
         Golden-Rule.md: Misc/x265-4k.md
-        show-unknown.md: Radarr/V3/Tips/Radarr-show-unknown-movie-items.md
+        show-unknown.md: Radarr/Tips/Radarr-show-unknown-movie-items.md
 
 theme:
   name: material
@@ -75,14 +100,24 @@ theme:
   features:
     - navigation.instant
     - navigation.tabs
-    - navigation.expand
   language: en
   palette:
-    primary: indigo
-    accent: indigo
-    scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      primary: indigio
+      accent: blue
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: indigo
+      accent: blue
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
   font:
-    text: "Roboto"
-    code: "Fira Code"
+    text: "Noto Sans"
+    code: "Encode Sans Expanded"
   favicon: img/favicon.png
   logo: img/logo.png
